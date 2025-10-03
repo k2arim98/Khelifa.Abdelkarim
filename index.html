@@ -64,13 +64,19 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/myAvatar.JPG" 
-            alt="Richard hanrick" 
-            width="20" 
-            height="120"
-            style="border-radius:15%; object-fit:cover;">
-
+          <picture>
+            <!-- Mobile: hidden by using a very small image or skipping -->
+            <source srcset="" media="(max-width: 768px)">
+            
+            <!-- Desktop: your original image -->
+            <img src="./assets/images/myAvatar.JPG" 
+                alt="Richard hanrick" 
+                width="90" 
+                height="90"
+                style="border-radius:20%; object-fit:cover;">
+          </picture>
         </figure>
+
 
         <div class="info-content">
           <h1 class="name" title="Richard hanrick">Khelifa Abdelkarim</h1>
