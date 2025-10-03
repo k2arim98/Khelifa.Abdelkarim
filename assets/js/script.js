@@ -191,3 +191,18 @@ navLinks.forEach(link => link.addEventListener("click", () => {
   link.classList.add("active");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }));
+const serviceIcons = document.querySelectorAll(".service-icon-box");
+
+function adjustIcons() {
+  if (window.innerWidth <= 768) {
+    serviceIcons.forEach(icon => icon.setAttribute("align", "center"));
+  } else {
+    serviceIcons.forEach(icon => icon.removeAttribute("align"));
+  }
+}
+
+// Initial check
+adjustIcons();
+
+// Update on resize
+window.addEventListener("resize", adjustIcons);
